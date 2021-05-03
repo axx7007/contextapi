@@ -9,12 +9,14 @@ const Add = () => {
 
   const onAdd = () => {
     console.log(name, price);
-    setData((prev) => [
-      ...prev,
-      { id: data.length + 1, name: name, price: price },
-    ]);
-    setName("");
-    setPrice("");
+    if (name.length !== 0 && price.length !== 0) {
+      setData((prev) => [
+        ...prev,
+        { id: data.length + 1, name: name, price: price },
+      ]);
+      setName("");
+      setPrice("");
+    }
   };
   return (
     <Container>
