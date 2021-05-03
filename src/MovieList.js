@@ -8,7 +8,7 @@ const MovieList=()=>{
         <div>
             {data.map((value, index)=>{
                 return(
-                    <Movie value={value} />
+                    <Movie key={value.id} value={value} />
                 )
             })}
         </div>
